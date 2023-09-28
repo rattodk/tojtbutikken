@@ -3,6 +3,7 @@
 import React from 'react'
 import SideTitle from './SideTitle';
 import MyClothing from './Clothing.jsx';
+import MyBox from './Clothing.jsx';
 
 
 
@@ -14,6 +15,7 @@ function SideNav() {
     <div className='SideNav'> 
     <div className='SideGrid'>
         <div className="SideMargin">
+            <div className='fixed'>
 <div className='SideNavLink'>
 <a ClassNamehref="SideNavLink">
 <btn className="SideNavBtn">
@@ -35,13 +37,12 @@ function SideNav() {
     yeet4
 </btn>
 </a>
+</div>
+</div>
+</div>
+    <MyBox />
 
-</div>
 
-</div>
-<div className='ObjectGrid'>
-    <MyClothing />
-</div>
 
 
 

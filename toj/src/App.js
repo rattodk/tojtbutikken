@@ -5,6 +5,7 @@ import Title from './components/title.jsx';
 import MyTitle from './components/title.jsx';
 import SideNav from './components/title.jsx';
 import MyClothing from './components/Clothing';
+import Footeroo from './components/Footeroo.jsx';
 
 
 
@@ -20,7 +21,9 @@ export default function MyApp() {
       <div>
 </div>
 <SideNav />
+<Footeroo />
 </div>
+
   );
 };
 

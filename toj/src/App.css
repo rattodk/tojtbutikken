@@ -73,6 +73,16 @@
   grid-template-columns: 1fr;
   text-align: center;
 }
+
+.fixed {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  position: fixed;
+  width: 20%;
+  margin-bottom: 10px;
+}
+
 .SideMargin {
   margin-top: 100px;
 }
@@ -105,10 +115,22 @@
 
 .ObjectGrid {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  margin-right: 5%;
 }
 
 .ClothObjt {
   background-color: green;
   height: 250px;
+  text-align: center;
+}
+
+.footer {
+  background-color: blue;
+  height: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  margin-top: 30px;
 }
