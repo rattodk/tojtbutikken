@@ -26,8 +26,13 @@ function ComponentHeader() {
             </button>
             </a>
         </div>
-       
+        <div className="kurven">
+
+
+        </div>
+      
       </div>
+      
     );
   }
   export default ComponentHeader

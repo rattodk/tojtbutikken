@@ -6,6 +6,8 @@ import MyTitle from './components/title.jsx';
 import SideNav from './components/title.jsx';
 import MyClothing from './components/Clothing';
 import Footeroo from './components/Footeroo.jsx';
+import kobknap from './components/kobknap';
+
 
 
 
@@ -21,6 +23,7 @@ export default function MyApp() {
       <div>
 </div>
 <SideNav />
+<kobknap />
 <Footeroo />
 </div>
 

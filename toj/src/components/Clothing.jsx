@@ -1,4 +1,6 @@
 import React from "react";
+import Kurvknap from './kobknap.jsx';
+
 
 
 
@@ -24,6 +26,7 @@ const MyClothing = Clothing.map(Clothing => (
 <p>{Clothing.name}</p>
 <p>{Clothing.img}</p>
 <p>{Clothing.price}</p>
+<Kurvknap />
 </div>
   ));
 
