@@ -1,4 +1,4 @@
-import MyClothing from "./Clothing";
+import Ccart from "./basket-icon.jsx";
 
 function ComponentHeader() {
     return (
@@ -25,12 +25,8 @@ function ComponentHeader() {
                 fyld
             </button>
             </a>
-        </div>
-        <div className="kurven">
-
-
-        </div>
-      
+<Ccart />
+      </div>
       </div>
       
     );
