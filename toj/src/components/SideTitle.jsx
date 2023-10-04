@@ -1,21 +1,27 @@
 import React, { useState } from "react";
+import MyClothing from "./Clothing";
 
-function SideTitle() {
+export default function SideTitle() {
   const [displayText, setDisplayText] = useState("Alt");
+  const [selectedCategory, setselectedCategory] = useState("All");
 
   function troje() {
-    setDisplayText("T-shirts");
+    setDisplayText("T-Shirts");
+    setselectedCategory("Trøje");
   }
 
   function bukser() {
     setDisplayText("Bukser");
+    setselectedCategory("Bukser");
   }
 
   function Sko() {
     setDisplayText("Sko");
+    setselectedCategory("Sko");
   }
   function Alle() {
     setDisplayText("Alt");
+    setselectedCategory("Alt");
   }
   return (
     <div>
@@ -27,7 +33,7 @@ function SideTitle() {
           Alt
         </button>
         <button className="SideNavBtn" onClick={troje}>
-          Trøjer
+          T-Shirt
         </button>
         <button className="SideNavBtn" onClick={bukser}>
           Bukser
@@ -40,5 +46,3 @@ function SideTitle() {
     </div>
   );
 }
-
-export default SideTitle;
