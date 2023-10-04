@@ -1,27 +1,30 @@
-import React, { useState } from "react";
-import MyClothing from "./Clothing";
+import React, { useContext, useState } from "react";
 
 export default function SideTitle() {
   const [displayText, setDisplayText] = useState("Alt");
-  const [selectedCategory, setselectedCategory] = useState("All");
+  const { clothingItems, setClothingItems } = clothingItems;
 
   function troje() {
     setDisplayText("T-Shirts");
-    setselectedCategory("Trøje");
+    setClothingItems(clothingItems.filter((x) => x.name === "Trøje"));
   }
 
   function bukser() {
     setDisplayText("Bukser");
-    setselectedCategory("Bukser");
+    setClothingItems(clothingItems.filter((x) => x.name === "Bukser"));
   }
 
   function Sko() {
     setDisplayText("Sko");
-    setselectedCategory("Sko");
+    setClothingItems(clothingItems.filter((x) => x.name === "Sko"));
+  }
+  function Hat() {
+    setDisplayText("Hat");
+    setClothingItems(clothingItems.filter((x) => x.name === "Hat"));
   }
   function Alle() {
     setDisplayText("Alt");
-    setselectedCategory("Alt");
+    setClothingItems(clothingItems.filter((x) => x.name === "Alt"));
   }
   return (
     <div>
@@ -41,6 +44,9 @@ export default function SideTitle() {
 
         <button className="SideNavBtn" onClick={Sko}>
           Sko
+        </button>
+        <button className="SideNavBtn" onClick={Hat}>
+          Hat
         </button>
       </div>
     </div>

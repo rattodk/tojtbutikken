@@ -1,11 +1,13 @@
 // src/Title.js
 
-import React from "react";
+import React, { useContext, useState } from "react";
 import SideTitle from "./SideTitle";
-import MyClothing from "./Clothing.jsx";
-import MyBox from "./Clothing.jsx";
+import MyClothing from "./MyClothing.jsx";
+import clothing from "./Clothingdata.json";
 
 function SideNav() {
+  const [clothingItems, setClothingItems] = useState(clothing);
+
   return (
     <div className="SideNav">
       <div className="SideGrid">
@@ -14,10 +16,9 @@ function SideNav() {
             <SideTitle />
           </div>
         </div>
-        <MyBox />
+        <MyClothing clothingItems={clothingItems} />
       </div>
     </div>
   );
 }
-
 export default SideNav;
