@@ -1,30 +1,32 @@
 import React, { useContext, useState } from "react";
+import ClothingContext from "../clothingcontext";
 
 export default function SideTitle() {
   const [displayText, setDisplayText] = useState("Alt");
-  const { clothingItems, setClothingItems } = clothingItems;
+  const clothingItems = useContext(ClothingContext);
+  const setClothingFilter = clothingItems.setClothingFilter;
 
   function troje() {
     setDisplayText("T-Shirts");
-    setClothingItems(clothingItems.filter((x) => x.name === "Trøje"));
+    setClothingFilter("Trøje");
   }
 
   function bukser() {
     setDisplayText("Bukser");
-    setClothingItems(clothingItems.filter((x) => x.name === "Bukser"));
+    setClothingFilter("Bukser");
   }
 
   function Sko() {
     setDisplayText("Sko");
-    setClothingItems(clothingItems.filter((x) => x.name === "Sko"));
+    setClothingFilter("Sko");
   }
   function Hat() {
     setDisplayText("Hat");
-    setClothingItems(clothingItems.filter((x) => x.name === "Hat"));
+    setClothingFilter("Hat");
   }
   function Alle() {
     setDisplayText("Alt");
-    setClothingItems(clothingItems.filter((x) => x.name === "Alt"));
+    setClothingFilter("Alt");
   }
   return (
     <div>

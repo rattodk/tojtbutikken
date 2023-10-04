@@ -7,18 +7,25 @@ import SideNav from "./components/SideNav.jsx";
 import MyClothing from "./components/MyClothing";
 import Footeroo from "./components/Footeroo.jsx";
 import kobknap from "./components/kobknap";
-import React, { useContext } from "react";
+import React, { useContext, createContext, useState } from "react";
+import Clothingdata from "./components/Clothingdata.json";
+import ClothingContext from "./clothingcontext.js";
 
 export default function MyApp() {
+  const [clothingFilter, setClothingFilter] = useState("Alt");
   return (
-    <div>
+    <ClothingContext.Provider
+      value={{ clothingitems: Clothingdata, clothingFilter, setClothingFilter }}
+    >
       <div>
-        <ComponentHeader />
+        <div>
+          <ComponentHeader />
+        </div>
+        <div></div>
+        <SideNav />
+        <kobknap />
+        <Footeroo />
       </div>
-      <div></div>
-      <SideNav />
-      <kobknap />
-      <Footeroo />
-    </div>
+    </ClothingContext.Provider>
   );
 }
