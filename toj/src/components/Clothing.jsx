@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Kurvknap from "./kobknap.jsx";
+import troje from "./SideTitle.jsx";
+import bukser from "./SideTitle.jsx";
+import Sko from "./SideTitle.jsx";
+import Alle from "./SideTitle.jsx";
 
 export default function MyClothing() {
   const Clothing = [
@@ -84,6 +88,7 @@ export default function MyClothing() {
         "https://www.vibram.com/dw/image/v2/AAWR_PRD/on/demandware.static/-/Sites-vibram-storefront-us/default/dw0c4ea450/0000000000000000000000000000000000_1350x1688_FiveFingers-min.png?sw=1090&sh=1363",
     },
   ];
+
   const MyClothing = Clothing.map((Clothing) => (
     <div className="ClothObjt" key={`clothing-${Clothing.id}`}>
       <p>{Clothing.name}</p>
